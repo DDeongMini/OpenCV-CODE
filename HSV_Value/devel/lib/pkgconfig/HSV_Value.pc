@@ -1,0 +1,8 @@
+prefix=/home/sm/OpenCV_CODE/HSV_Value/devel
+
+Name: HSV_Value
+Description: Description of HSV_Value
+Version: 0.1.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

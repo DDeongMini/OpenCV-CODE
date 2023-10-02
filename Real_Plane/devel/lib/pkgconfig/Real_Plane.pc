@@ -1,0 +1,8 @@
+prefix=/home/sm/OpenCV_CODE/Real_Plane/devel
+
+Name: Real_Plane
+Description: Description of Real_Plane
+Version: 0.1.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
