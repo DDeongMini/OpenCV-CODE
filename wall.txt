@@ -1,0 +1,39 @@
+    if (distance_rect >= 0.75)
+    {
+        if (tmp_img_proc_wall_number == 0) //start
+        {
+            tmp_img_proc_wall_number = 1; // straight
+        }
+        else if (tmp_img_proc_wall_number == -3) // End 
+        {
+            tmp_img_proc_wall_number = 10; // Straight to find corner
+        }
+        else if (tmp_img_proc_wall_number == 3) // IN wall 
+        {
+            tmp_img_proc_wall_number = -1; //Straight to find right plane
+        }
+    }
+    else if (distance_rect > 0.4 && distance_rect < 0.75)
+    {
+        //plane decision
+        if (right_plane_mode)
+        {
+            tmp_img_proc_wall_number = 2;  // RIGHT plane -> straight
+        }
+        else if (left_plane_mode)
+        {
+            tmp_img_proc_wall_number = -2; // LEFT plane -> straight
+        }
+    }
+    else if (distance_rect <= 0.4)
+    {
+        //Right plane
+        if (tmp_img_proc_wall_number == 2)
+        {
+            tmp_img_proc_wall_number = 3; //LEFT_step
+        }
+        else if (tmp_img_proc_wall_number == -2)
+        {
+            tmp_img_proc_wall_number = -3; //RIGHT_step
+        }
+    }
